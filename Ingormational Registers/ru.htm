@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+	<title>Регистры сведений. Для чего и зачем?</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<link rel="stylesheet" href="themes/ribbon/styles/style.css">
+	<link rel="stylesheet" href="themes/ribbon/styles/print.css" media="print">
+	<!--
+		Для оформления отдельный слайдов, используйте
+		ID слайда для доступа к необходимым элементам
+		-->
+	<style>
+		#Cover h1 {
+			margin-top: 70px;
+			text-align:left;
+			font-size:45px;
+			color:#FFF;
+			text-shadow: 2px 2px 3px #000000, 0 0 1em #000000;
+		}
+		#Cover h2 {
+			margin-top: 10px;
+			color:#FFF;
+			text-shadow: 2px 2px 3px #000000, 0 0 1em #000000;
+			text-align:left;
+			font-size:70px;
+			}
+		#FitToWidth h2,
+		#FitToHeight h2 {
+			color:#FFF;
+			text-align:center;
+			}
+		#FitToWidth6 h2{
+			color:rgb(60,120,140);
+			text-align:left;
+			font-size:45px;
+		}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Регистры сведений</h1>
+		<p><a href="vk.com/pozitr0n">Роман Козарь</a>, <a href="gbsoft.by">GBSoft</a></p>
+	</header>
+
+	<div class="slide cover" id="Cover"><div>
+		<section>
+			<header>
+				<h2>Регистр сведений<br>Зачем и почему?</h2>
+				<h1>Роман Козарь</h1>
+			</header>
+			<img src="pictures/image1.png" alt="">
+		</section>
+	</div></div>
+
+	<div class="slide" id="BlockQuote"><div>
+		<section>
+			<header>
+				<h2>Что имеем?</h2>
+			</header>
+			<blockquote> Хотим хранить информацию о ценах конкурентов на продаваемые нами товары</blockquote>
+			<blockquote> Хотим отслеживать динамику изменений цен</blockquote>                                                                   <blockquote>...а если еще хотим и периодически ее хранить?</blockquote>
+			</section>
+	</div></div>
+
+	<div class="slide cover w" id="FitToWidth"><div>
+		<section>
+			<header>
+				<h2>Так что же такое Регистр Сведений?</h2>
+			</header>
+			<img src="pictures/pic-1.jpg" alt="">
+		</section>
+	</div></div>
+
+	<div class="slide" id="Header"><div>
+		<section>
+			<header>
+				<h2>Регистр сведений</h2>
+			</header>
+			<p>Фактически это <b>массив данных</b>, необходимый, чтобы реализовать функцию, которая может выдать необходимую информацию по определенному набору аргументов. </p>
+		</section>
+	</div></div>
+
+	<div class="slide cover w" id="FitToWidth 9"><div>
+		<section>
+			<img src="pictures/infreg_1C.png" alt="">
+		</section>
+	</div></div>
+
+	<div class="slide" id="OrderedList"><div>
+		<section>
+			<header>
+				<h2>Регистр сведений</h2>
+			</header>
+			<ol>
+				<li>Аргументы - <b>измерения</b></li>
+				<li>Результат функции - <b>ресурсы</b></li>
+				<ol><i>ресурсов может быть больше, чем один (например, <b>оптовая</b> и <b>розничная</b> цена)</i></ol>
+			</ol>
+		</section>
+	</div></div>
+
+	<div class="slide" id="InTheMiddle"><div>
+		<section>
+			<header>
+				<h2>А что с периодом?</h2>
+			</header>
+			<img src="pictures/logo_time.png" alt="" width="256" height="256" viewBox="0 0 512 512" class="middle">
+		</section>
+	</div></div>
+
+	<div class="slide shout" id="Shout 1"><div>
+		<section>
+			<header>
+				<h2>Периодический регистр</h2>
+			</header>
+			<p>Для разворота информации во времени используется поле <b>Период</b>. Оно не вносится в качестве измерения, а добавляется системой автоматически при создании периодического регистра.</p>
+		</section>
+	</div></div>
+
+	<div class="slide" id="OrderedList 1"><div>
+		<section>
+			<header>
+				<h2>Какие операции поддерживает система, если регистр периодический?</h2>
+			</header>
+			<ol>
+				<li>получение наиболее позднего/раннего значения по <b>определенной комбинации</b> измерений</li>
+				<li>получения <b>среза</b> наиболее поздних/ранних значений</li>
+			</ol>
+		</section>
+	</div></div>
+
+	<div class="slide" id="OrderedList 2"><div>
+		<section>
+			<header>
+				<h2>Например</h2>
+			</header>
+			<ol>
+				<li>получение последней введенной цены по конкретному товару и конкретному конкуренту</li>
+				<li>могут быть получены все последние введенные цены по различным товарам и конкурентам</li>
+			</ol>
+		</section>
+	</div></div>
+
+	<div class="slide shout" id="Shout 2"><div>
+		<section>
+			<header>
+				<h2>Не периодический регистр</h2>
+			</header>
+			<p>Если регистр не периодический, то поле <b>Период</b> для него не создается. Регистр может быть непериодическим, если <b>не нужно</b> хранить историю изменения цен, а хотим иметь только <b>актуальные</b> цены.</p>
+		</section>
+	</div></div>
+
+	<div class="slide shout" id="Shout"><div>
+		<section>
+			<header>
+				<h2>В итоге имеем?</h2>
+				<style>
+					#Shout h2 {
+						text-align: center;
+						font-size: 190px;
+					}
+				</style>
+			</header>
+		</section>
+	</div></div>
+
+	<div class="slide shout" id="Shout 3"><div>
+		<section>
+			<header>
+				<h2>Принцип работы регистра сведений</h2>
+			</header>
+			<p>В системе может быть <code>только одна запись</code> с определенным набором и периодом измерений.</p>
+		</section>
+	</div></div>
+
+	<div class="slide shout" id="Shout 4"><div>
+		<section>
+			<header>
+				<h2>Уникальность регистра сведений</h2>
+			</header>
+			<p>Уникальность записей по набору измерений <b>принципиально отличает</b> регистры сведений от <b>регистров накоплений</b>, которые позволяют вводить несколько записей с одинаковым значением измерений и периодом.</p>
+		</section>
+	</div></div>
+
+	<div class="slide" id="OrderedList3"><div>
+		<section>
+			<header>
+				<h2>Регистр сведений</h2>
+			</header>
+			<ol>
+				<li>Строки регистра сведений - <b>записи</b></li>
+				<li>Вносить информацию в регистр сведений можно:</li>
+				<ul>
+					<li>вручную</li>
+					<li>документами</li>
+				</ul>
+			</ol>
+		</section>
+	</div></div>
+
+	<div class="slide shout" id="Shout 5"><div>
+		<section>
+			<header>
+				<h2>Регистр сведений</h2>
+			</header>
+			<p>Документ, которым вносится запись в регистр сведений, называется <code>регистратором</code>.</p>
+			<p>Если регистр записывается регистратором - записи будут жестко подчинены <b>регистраторам</b> - <b>документам</b>. Записи будут порождаться при <b>проведении</b> документов. При удалении документа записи будут удаляться автоматически.</p>
+		</section>
+	</div></div>
+
+	<div class="slide" id="OrderedList4"><div>
+		<section>
+			<header>
+				<h2>Регистр сведений в программных модулях</h2>
+			</header>
+			<p>Общие действия над регистром (поиск, выбор и создание записей)</p>
+			<ul>
+				<li>объект <code>РегистрСведенийМенеджер.<Имя регистра сведений></code></li>
+			</ul>
+		</section>
+	</div></div>
+
+	<div class="slide" id="OrderedList5"><div>
+		<section>
+			<header>
+				<h2>Регистр сведений в программных модулях</h2>
+			</header>
+			<p>Чтения, запись, удаление отдельных записей регистра сведений, не управляемого регистраторами</p>
+			<ul>
+				<li>объект <code>РегистрСведенийМенеджерЗаписи.<Имя регистра сведений></code></li>
+			</ul>
+		</section>
+	</div></div>
+
+	<div class="slide" id="OrderedList6"><div>
+		<section>
+			<header>
+				<h2>Регистр сведений в программных модулях</h2>
+			</header>
+			<p>Для считывания и занесения набора записей в базу данных по определенному условию отбора</p>
+			<ul>
+				<li>объект <code>РегистрСведенийНаборЗаписей.<Имя регистра сведений></code></li>
+			</ul>
+		</section>
+	</div></div>
+
+	<div class="slide" id="OrderedList7"><div>
+		<section>
+			<header>
+				<h2>Регистр сведений в программных модулях</h2>
+			</header>
+			<p>Для динамического обхода записей регистра</p>
+			<ul>
+				<li>объект <code>РегистрСведенийВыборка.<Имя регистра сведений></code></li>
+			</ul>
+		</section>
+	</div></div>
+
+	<div class="slide" id="TwoLinesHeader"><div>
+		<section>
+			<header>
+				<h2>Примеры</h2>
+			</header>
+			<ul>
+				<li><code><a href="http://dumpz.org/1886458/" target="_blank">Перейти к листингу 1</a></code></li>
+				<li><code><a href="http://dumpz.org/1886464/" target="_blank">Перейти к листингу 2</a></code></li>
+				<li><code><a href="http://dumpz.org/1886465/" target="_blank">Перейти к листингу 3</a></code></li>
+			</ul>
+		</section>
+	</div></div>
+
+	<div class="slide shout" id="Shout6"><div>
+		<section>
+			<header>
+				<h2>Спасибо за внимание!</h2>
+				<style>
+					#Shout6 h2 {
+						text-align: center;
+						font-size: 190px;
+					}
+				</style>
+			</header>
+		</section>
+	</div></div>
+
+	<div class="slide shout" id="Shout7"><div>
+		<section>
+			<header>
+				<h2>Вопросы?</h2>
+				<style>
+					#Shout7 h2 {
+						text-align: center;
+						font-size: 190px;
+						padding-top: 100px;
+					}
+				</style>
+			</header>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="ThankYou"><div>
+		<section>
+			<header>
+				<h2>Регистры сведений <br> Зачем и почему?</h2>
+			</header>
+			<a href="http://twitter.com/pozitr0n1">Роман Козарь</a>
+			<p>Исходник презентации: <a href="http://github.com/pozitr0n">тут</a></p>
+		</section>
+	</div></div>
+	<!--
+		Для того, чтобы убрать индикатор прогресса
+		из презентации, просто удалите элемент «progress».
+		-->
+	<div class="progress"><div></div></div>
+	<script src="scripts/script.js"></script>
+	<!-- Copyright © 2012 Roman Kozar-->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+</body>
+</html>
